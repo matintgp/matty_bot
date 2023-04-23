@@ -9,7 +9,7 @@ from PIL import Image
 import glob
 
 
-TOKEN = '6120316368:AAGhLU0siE2r3WgISN201iRrgse9m_K9kCc'
+TOKEN = ''
 bot = telebot.TeleBot(TOKEN)
 tety=telebot.types
 # telebot.apihelper.ENABLE_MIDDLEWARE = True
