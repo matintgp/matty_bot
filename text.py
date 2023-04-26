@@ -1,5 +1,5 @@
 import requests 
-token = 'e8b4e8bc82027dfdea0e871ee91b90f9/'
+token = ''
 URL = 'https://favqs.com/api/qotd'
 
 response = requests.request('get',URL)
