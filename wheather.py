@@ -29,18 +29,7 @@ def wheather():
     HAVE GOOD DAY :)
     '''
     return newdata
-    # print(newdata)
-    # print("wheather module printed")
-#     print(f'''Tomorrow is {(daysdata[1])["icon"]}
-# {(daysdata[1])["datetime"]},{(hoursdata[1])["datetime"]}
-# {jsonData["timezone"]}
-# minimum temperature: {(daysdata[1])['tempmin']}C
-# maximum temperature: {(daysdata[1])['tempmax']}C
-# Today's average temperature: {(daysdata[1])['temp']}C
-# Current temperature: {(hoursdata[1])["temp"]}C
-# description: {(daysdata[1])["description"]}
-# HAVE GOOD DAY :)
-# ''')
+
 
 wheather()
 
