@@ -12,15 +12,6 @@ import glob
 TOKEN = ''
 bot = telebot.TeleBot(TOKEN)
 tety=telebot.types
-# telebot.apihelper.ENABLE_MIDDLEWARE = True
-
-# @bot.middleware_handler(update_types=['message'])
-# def modify_message(bot_instance, message):
-#     # modifying the message before it reaches any other handler 
-#     message.another_text ='/'+ message.text 
-
-
-
 
 
 
@@ -48,17 +39,6 @@ def wheather_message(message):
     bot.reply_to(message, data)
 bot.register_next_step_handler
 
-@bot.message_handler(commands=['matin'])
-def matin(message):
-    # bot.send_message(message.chat.id, 'slm matin dash in ye teste...')
-
-    # bot.send_audio(message.chat.id, audio=open(r'C:\Users\new\Desktop\CODE\mattybot\12 Nirvana - Something In The Way (Album Version).mp3','rb'))
-    
-    usersname=(bot.get_chat(chat_id=message.chat.id)).username
-    tety.User(id=usersname,is_bot=False,first_name=usersname)
-
-    # m=bot.get_me()
-    # bot.send_message(message.chat.id, m)
 
 @bot.message_handler(chat_id=[1570745503, -1001784204202], commands=['update'])
 def update_comand(message):
@@ -78,7 +58,7 @@ bot.add_custom_filter(custom_filters.ChatFilter())
 
 def quote(message):
     
-    token = 'e8b4e8bc82027dfdea0e871ee91b90f9/'
+    token = ''
     URL = 'https://favqs.com/api/qotd'
 
     response = requests.request('get',URL)
@@ -101,7 +81,7 @@ def quote(message):
         bot.send_message(message.chat.id, text, parse_mode='Markdown')
 
 
-
+#test
 @bot.message_handler(commands=['send'])
 def photo(message):
     # for file in glob.glob(r'C:\Users\new\Desktop\CODE\telegram bots\mattybot\new\*.png'):
@@ -176,7 +156,7 @@ def fetch_horoscope(message, sign):
 
 
     
-
+#test
 @bot.message_handler(commands=["resizer"])
 def resizer_message(message):
     username=(bot.get_chat(chat_id=message.chat.id)).username
